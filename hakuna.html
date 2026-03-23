@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hakuna – Tapiwa M</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Animated background gradient */
+    @keyframes backgroundShift {
+      0% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+      50% { background: linear-gradient(135deg, #ff6f61, #ff9966); }
+      100% { background: linear-gradient(135deg, #1db954, #191414); }
+    }
+    body {
+      animation: backgroundShift 12s infinite alternate;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 25px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    img.cover {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #ffdf6c;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: #ddd;
+    }
+
+    .platform-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .platform-links a {
+      display: block;
+      padding: 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    .platform-links a:hover {
+      transform: scale(1.08) rotate(-1deg);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    }
+
+    .youtube { background: #FF0000; }
+    .apple { background: #000000; }
+    .spotify { background: #1DB954; }
+    .deezer { background: #FF6F61; }
+
+    /* Floating musical notes */
+    .note {
+      position: absolute;
+      font-size: 2em;
+      opacity: 0.7;
+      animation: floatNotes 8s linear infinite;
+    }
+
+    @keyframes floatNotes {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Mobile-friendly tweaks */
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      .platform-links a {
+        font-size: 1em;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating notes -->
+  <div class="note" style="left:10%; animation-delay:0s;">🎵</div>
+  <div class="note" style="left:30%; animation-delay:2s;">🎶</div>
+  <div class="note" style="left:50%; animation-delay:4s;">🎼</div>
+  <div class="note" style="left:70%; animation-delay:6s;">🎵</div>
+  <div class="note" style="left:85%; animation-delay:8s;">🎶</div>
+
+  <div class="container">
+    <img src="Hakuna Cover Art.png" alt="Hakuna Cover Art" class="cover">
+    <h1>🎶 Listen to "Hakuna" by Tapiwa M 🎶</h1>
+    <p>Pick your preferred platform:</p>
+    <div class="platform-links">
+      <a href="https://music.youtube.com/watch?v=9FwLGzHicn4&si=jTl16ZBsnAaWTOMZ" target="_blank" class="youtube">YouTube Music</a>
+      <a href="https://music.apple.com/us/song/hakuna/1886233645" target="_blank" class="apple">Apple Music</a>
+      <a href="https://open.spotify.com/track/5IP0yNl6SquKf6c8J00RfH?si=b36937e32cd44ae2" target="_blank" class="spotify">Spotify</a>
+      <a href="https://link.deezer.com/s/32MVvWQIdtNQOPSWUEuNg" target="_blank" class="deezer">Deezer</a>
+    </div>
+  </div>
+</body>
+</html>
